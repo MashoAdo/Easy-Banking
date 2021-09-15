@@ -38,14 +38,12 @@ $font-weight: (
 );
 // variables
 $line-height: 1.7;
-// js Classes
-.show-menu {
-	position: relative;
-}
+
 // BODY CSS
 body {
 	font-size: 18px;
 	font-family: "Public Sans", sans-serif;
+	position: relative;
 }
 
 .menu-items {
@@ -53,6 +51,7 @@ body {
 		color: $Dark-Blue;
 	}
 }
+
 @media screen and (max-width: 768px) {
 	.top-nav {
 		display: flex;
@@ -62,9 +61,18 @@ body {
 		align-items: center;
 	}
 	.nav-menu {
-		border: 1px red solid;
-		display: none;
+		position: absolute;
+		width: 100vw;
+		height: auto;
+		padding-top: 2rem;
+		top: -100%;
+		background-color: $White;
+		z-index: 20;
+		right: 0%;
+		transition: 2s ease-in-out;
 	}
+	// class used by js script to display menu
+
 	.menu-items {
 		display: flex;
 		flex-direction: column;
@@ -78,6 +86,33 @@ body {
 		display: none;
 	}
 }
+.show {
+	top: inherit;
+}
+
+.nav-link {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		background: linear-gradient(
+			90deg,
+			rgba(47, 199, 140, 1) 41%,
+			rgba(47, 191, 217, 1) 85%
+		);
+		width: 0;
+		height: 3px;
+		bottom: -10px;
+		left: 50%;
+		display: block;
+		transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	}
+}
+a::before:hover {
+	width: 100%;
+	left: 0;
+}
+// introduction section
 .header-image {
 	position: relative;
 
