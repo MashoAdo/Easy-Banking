@@ -90,19 +90,19 @@ body {
 .nav-link::before {
   content: "";
   position: absolute;
+  display: block;
   background: -webkit-gradient(linear, left top, right top, color-stop(41%, #2fc78c), color-stop(85%, #2fbfd9));
   background: linear-gradient(90deg, #2fc78c 41%, #2fbfd9 85%);
   width: 0;
   height: 3px;
-  bottom: -10px;
+  bottom: -5px;
   left: 50%;
-  display: block;
   -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
 }
 
-a::before:hover {
-  width: 100%;
+.nav-link:hover::before {
+  width: 120%;
   left: 0;
 }
 
@@ -393,12 +393,15 @@ footer .logo {
         -ms-flex-direction: row;
             flex-direction: row;
     padding-right: 1rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   .menu-items {
-    margin-right: 2rem;
+    padding: 1rem;
   }
   .menu-items a {
     margin-right: 1rem;

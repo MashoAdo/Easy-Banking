@@ -95,6 +95,7 @@ body {
 	&::before {
 		content: "";
 		position: absolute;
+		display: block;
 		background: linear-gradient(
 			90deg,
 			rgba(47, 199, 140, 1) 41%,
@@ -102,15 +103,14 @@ body {
 		);
 		width: 0;
 		height: 3px;
-		bottom: -10px;
+		bottom: -5px;
 		left: 50%;
-		display: block;
 		transition: width 0.3s ease 0s, left 0.3s ease 0s;
 	}
-}
-a::before:hover {
-	width: 100%;
-	left: 0;
+	&:hover::before {
+		width: 120%;
+		left: 0;
+	}
 }
 // introduction section
 .header-image {
@@ -336,11 +336,11 @@ footer {
 		display: flex;
 		flex-direction: row;
 		padding-right: 1rem;
-		// justify-content: space-between;
+		justify-content: space-between;
 		align-items: center;
 	}
 	.menu-items {
-		margin-right: 2rem;
+		padding: 1rem;
 		a {
 			margin-right: 1rem;
 		}
