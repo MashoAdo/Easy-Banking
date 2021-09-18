@@ -27,7 +27,7 @@ body {
   color: #2d314d;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .top-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -71,8 +71,8 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-  .menu-items a {
-    margin-bottom: 2rem;
+  .menu-items li {
+    padding: 1rem;
   }
   .nav-button {
     display: none;
@@ -330,6 +330,60 @@ footer .logo {
 
 .copyrights span {
   color: #9698a6;
+}
+
+@media screen and (min-width: 810px) {
+  .menu-btn {
+    display: none;
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu-items li {
+    padding: 1rem;
+  }
 }
 
 @media screen and (min-width: 700px) {

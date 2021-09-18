@@ -52,7 +52,7 @@ body {
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
 	.top-nav {
 		display: flex;
 		padding: 1rem 2rem;
@@ -71,15 +71,14 @@ body {
 		right: 0%;
 		transition: 2s ease-in-out;
 	}
-	// class used by js script to display menu
 
 	.menu-items {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		a {
-			margin-bottom: 2rem;
+		li {
+			padding: 1rem;
 		}
 	}
 	.nav-button {
@@ -291,6 +290,32 @@ footer {
 }
 
 // ==================RESPONSIVENESS===============
+@media screen and(min-width:810px) {
+	.menu-btn {
+		display: none;
+	}
+	nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.nav-menu {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.menu-items {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		li {
+			padding: 1rem;
+		}
+	}
+}
 @media screen and (min-width: 700px) {
 	// SERVICES SECTION
 	.services {
